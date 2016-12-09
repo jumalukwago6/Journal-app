@@ -1,9 +1,24 @@
-<form class="form-signin" action="showLanding" method="post">
+<html>
+<head>
+	<title>My Journal Flask App - login page </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="static/bootstrip.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	<div class="container">
+		<hi1>please login</h1>
+		<br>
+		<form action="dashboard" method="post">
+			<input type="text" placeholder="Username" name="username" value="{{
+			request.form.username }}">
+			<input type="password" placeholder="Password" name="password" value="{{
+			request.form.password }}">
+			<input id="btnLogin" class="btn btn-lg btn-primary btn-block" type="submit" value="Login" />
+		</form>
+		{% if error %}
+		<p class="error"><strong>Error:</strong> {{ error}}</p>
+		{% endif %}
+	</div>
+</body>
+</body>
 
-        <label for="Username" class="sr-only">User name</label>
-        <input type="name" name="Username" id="Username" class="form-control" placeholder="Username" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
-
-        <input id="btnLogin" class="btn btn-lg btn-primary btn-block" type="submit" value="Login" />
-      </form>

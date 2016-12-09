@@ -2,18 +2,20 @@
 <html lang="en">
 
 <head>
+  {% block head %}
   <title>journal flask</title>
-
+  {% endblock %}
 
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css.css" > 
 
 </head>
 
 <body>
-
+{% block body %}
   <div class="container">
     <div class="header">
       <nav>
@@ -29,11 +31,11 @@
       <h3 class="text-muted">My Journal flask App</h3>
     </div>
 
-    <div class="jumbotron">
+    <div class="jumbotron" style="background-color:#fofofo">
       <h3>In order to continue to your Journals, please Login</h3>
       <p class="lead"></p>
       <p><a class="btn btn-lg btn-success" href="register" role="button">Sign Up</a>
-      <p><a class="btn btn-lg btn-success" href="showSignIn" role="button">Login</a>
+      <p><a class="btn btn-lg btn-success" href="login" role="button">Login</a>
       </p>
     </div>
 
@@ -64,8 +66,9 @@
     <footer class="footer">
       <p>&copy; Juma 2016</p>
     </footer>
-
+  
   </div>
+{% endblock %}
 </body>
 
 </html>
